@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/callLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/white"
+    tools:context=".FrontEnd.Activities.MainActivity.Fragments.CallsFragment.CallPreviewFragment">
+    <ImageView
+        android:id="@+id/userIcon"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_user_icon"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daniil"
+        android:layout_marginLeft="100dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/userLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="'@KGAFT'"
+        android:layout_marginLeft="100dp"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:layout_marginTop="25dp"/>
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ic_incoming_small_icon"
+        android:layout_marginLeft="100dp"
+
+        android:layout_marginTop="48dp"/>
+    <TextView
+        android:id="@+id/callDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(3) September 15, 18:56"
+        android:layout_marginLeft="115dp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:layout_marginTop="45dp"/>
+    <ImageView
+        android:id="@+id/callButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_calls_icon"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

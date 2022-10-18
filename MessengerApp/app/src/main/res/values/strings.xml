@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MiChat</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_fragment_hint">Mi is place, where you can chat</string>
+    <string name="login_page_title">Getting Started</string>
+    <string name="login_page_hint">Please enter your existing or new login</string>
+    <string name="password_input_page_hint">Please enter your password</string>
+    <string name="user_info_fragment_hint">Enter your info</string>
+    <string name="icon_hint">Your icon</string>
+    <string name="create_chat_title">Выберите контакты</string>
+</resources>

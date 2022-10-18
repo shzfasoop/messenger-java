@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_main_screen_logo" />
+
+        <ImageView
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_search_icon" />
+        <RelativeLayout
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+
+            android:background="@drawable/edit_text_background"
+            >
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_back_button_icon"/>
+            <EditText
+                android:id="@+id/searchField"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_centerVertical="true"
+
+                android:hint="Поиск"
+                android:textColor="@color/black"
+                android:layout_marginLeft="60dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp" />
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/fragmentSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="-25dp"
+        android:layout_marginRight="-25dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tabbar_second"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/default_bottom_navigation_menu" />
+</RelativeLayout>

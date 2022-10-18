@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".FrontEnd.Activities.ChatActivity.ChatActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_back_button_icon"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:id="@+id/chatName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"/>
+        <ImageView
+            android:id="@+id/callButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_call_icon_second"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:id="@+id/messageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:id="@+id/filePreviewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_text_background"
+            android:layout_marginRight="56dp"
+            android:layout_marginLeft="5dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/messageInputText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_text_background"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:hint="Напишите сообщение..."
+                android:layout_marginRight="50dp"/>
+            <ImageView
+                android:id="@+id/attachFileButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:scaleY="0.8"
+                android:scaleX="0.8"
+                android:src="@drawable/ic_attach_file_button"/>
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/ic_send_icon"/>
+    </RelativeLayout>
+
+</RelativeLayout>

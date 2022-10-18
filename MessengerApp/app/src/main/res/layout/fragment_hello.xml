@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A238FF"
+    tools:context=".FrontEnd.Activities.AuthorizationActivity.Fragments.HelloFragment">
+
+    <ImageView
+        android:id="@+id/messengerLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_high_res"/>
+    <TextView
+        android:id="@+id/helloHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/hello_fragment_hint"
+        android:textSize="25sp"
+        android:layout_alignBottom="@+id/messengerLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        />
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/default_button_shape"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignTop="@+id/helloHint"
+        android:layout_marginTop="200dp"
+        android:textColor="#A238FF"
+        android:textSize="20sp"
+        android:text="Continue"
+        />
+
+
+
+
+</RelativeLayout>

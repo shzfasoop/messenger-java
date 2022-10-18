@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:id="@+id/contactRoot"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FrontEnd.Activities.CreateChatActivity.ContactPreviewFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/userIconFrame"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:elevation="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        app:cardCornerRadius="60dp">
+        <ImageView
+            android:id="@+id/contactIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:src="@drawable/ic_user_icon"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/contactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daniil"
+        android:layout_marginLeft="100dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

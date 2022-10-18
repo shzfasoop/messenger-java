@@ -1,0 +1,55 @@
+syntax = "proto3";
+package com.KGAFT.michatmessengerserverproto;
+
+message CallData{
+  int64 packetId = 1;
+  int64 userId = 2;
+  int64 roomId = 3;
+  bytes callData = 4;
+}
+message ReceiveData{
+  int64 roomId = 1;
+  int64 userId = 2;
+}
+message nullResponse{
+
+}
+message CallDataResponse{
+  int64 packetId = 1;
+  bytes data = 2;
+  int64 userId = 3;
+}
+message VideoCallData{
+  int64 packetId = 1;
+  int64 userId = 2;
+  int64 roomId = 3;
+  bytes videoCallData = 4;
+}
+message VideoCallDataResponse{
+  int64 packetId = 1;
+  bytes data = 2;
+  int64 userId = 3;
+}
+message RoomsRequest{
+  int64 userId = 1;
+  int64 checkTime = 2;
+}
+message RoomsResponse{
+  int64 roomId=1;
+  string roomName=2;
+  int64 roomIconId=3;
+}
+message RoomStatusRequest{
+  int64 roomId = 1;
+}
+message roomStatusResponse{
+  bool exist = 1;
+}
+service CallService{
+  rpc sendCallData(CallData) returns(nullResponse);
+  rpc receiveCallData(ReceiveData) returns(stream CallDataResponse);
+  rpc sendVideoData(VideoCallData) returns(nullResponse);
+  rpc receiveVideoCallData(ReceiveData) returns(stream VideoCallDataResponse);
+  rpc checkNewRooms(RoomsRequest) returns(stream RoomsResponse);
+  rpc checkRoomExist(RoomStatusRequest) returns(roomStatusResponse);
+}

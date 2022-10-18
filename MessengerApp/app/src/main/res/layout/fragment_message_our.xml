@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+
+    android:id="@+id/messageBigRoot"
+    android:background="@drawable/message_our_background"
+    tools:context=".FrontEnd.Activities.ChatActivity.Fragments.MessageOurFragment">
+    <LinearLayout
+        android:id="@+id/messageRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:maxWidth="150dp"
+            />
+        <TextView
+            android:id="@+id/messageTime"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/messageText"
+            android:layout_alignParentEnd="true"
+            android:textColor="#FFFAFACC"
+            android:textSize="10sp"/>
+        <ImageView
+            android:id="@+id/viewAttachmentsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

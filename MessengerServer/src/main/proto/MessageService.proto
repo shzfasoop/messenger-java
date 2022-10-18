@@ -1,0 +1,48 @@
+syntax = "proto3";
+package com.KGAFT.michatmessengerserverproto;
+
+message MessageRequest{
+  string token = 1;
+  bytes messageText = 2;
+  int64 chatTarget = 3;
+  repeated int64 files = 4;
+}
+message User{
+  int64 userId = 1;
+  string name = 2;
+  string login = 3;
+  string number = 4;
+  int64 userIconId = 5;
+  int64 lastActive = 6;
+}
+message Chat{
+  int64 chatId = 1;
+  repeated User chatUsers = 2;
+  int64 creationDate = 3;
+}
+message MessageResponse{
+  int64 messageId = 1;
+  User sender = 2;
+  Chat target = 3;
+  int64 date = 4;
+  bytes messageText = 5;
+  repeated int64 attachedFiles = 6;
+}
+message authorizationNotificationRequest{
+  string token = 1;
+  int64 lastCheckTime = 2;
+}
+message authorizationChatRequest{
+  string token = 1;
+  int64 chatId = 2;
+  int64 lastCheckTime = 3;
+}
+message MessageAcceptedResponse{
+  bool accepted = 1;
+}
+
+service MessageService{
+  rpc sendMessage(MessageRequest) returns ( MessageAcceptedResponse);
+  rpc connectToNotifications(authorizationNotificationRequest) returns (stream MessageResponse);
+  rpc connectToMessageThread(authorizationChatRequest) returns (stream MessageResponse);
+}
